@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Rehman | Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/mrf1.png"> <!-- Update the favicon path -->
+  <style>
+    /* Custom Styles */
+    .header-bg {
+      background: linear-gradient(to right, #0f172a, #1e293b);
+    }
+    .project-card:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s;
+    }
+    .section-title {
+      background: linear-gradient(to right, #3b82f6, #1e40af);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .zoom {
+      transition: transform 0.3s;
+    }
+    .zoom:hover {
+      transform: scale(1.1);
+    }
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .rotate {
+      transition: transform 0.5s;
+    }
+    .rotate:hover {
+      transform: rotate(5deg) scale(1.05);
+    }
+    .btn-hover {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .btn-hover:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    }
+    .scroll-smooth {
+      scroll-behavior: smooth;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      background-color: #1e40af;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .back-to-top:hover {
+      background-color: #3b82f6;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-300 scroll-smooth">
+
+  <!-- Navigation -->
+  <nav class="bg-gray-800 shadow fixed w-full z-10">
+    <div class="container mx-auto px-6 py-3">
+      <div class="flex justify-between items-center">
+        <div>
+          <a class="text-gray-100 text-2xl font-bold hover:text-blue-400" href="#">Muhammad Rehman Freed</a>
+        </div>
+        <div class="space-x-6">
+          <a class="text-gray-100 hover:text-blue-400" href="#home">Home</a>
+          <a class="text-gray-100 hover:text-blue-400" href="#about">About</a>
+          <a class="text-gray-100 hover:text-blue-400" href="#projects">Projects</a>
+          <a class="text-gray-100 hover:text-blue-400" href="#skills">Skills</a>
+          <a class="text-gray-100 hover:text-blue-400" href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Back to Top Button -->
+  <div id="back-to-top" class="back-to-top">↑</div>
+
+  <!-- Home Section -->
+  <section id="home" class="flex items-center justify-center h-screen header-bg text-white">
+    <div class="text-center px-6 fade-in">
+      <img src="images/MRF3.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full mx-auto mb-4"> <!-- Update the profile picture path -->
+      <h1 class="text-6xl font-bold">Hello, I'm Muhammad Rehman</h1>
+      <p class="mt-4 text-xl">A Software Engineer specialized in full-stack development</p>
+      <a href="#projects" class="mt-6 inline-block bg-blue-500 text-white px-6 py-3 rounded shadow-lg font-semibold transition duration-300 transform hover:-translate-y-1 btn-hover">View My Work</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-800 fade-in-up">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold section-title">About Me</h2>
+      <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">I am a software engineer with experience in C++, C#, Java, Next.js, MERN stack, HTML, CSS, Bootstrap, and Tailwind CSS. I have worked on various projects during my university and continue to build my skills in web development.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gray-900 fade-in-up">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center section-title">Projects</h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Example Project -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden project-card transform transition-transform">
+          <img src="images/Picture1.png" alt="Project Screenshot" class="w-full h-48 object-cover"> <!-- Update the project image path -->
+          <div class="p-4">
+            <h3 class="text-2xl font-bold text-white">Shandarwheel Car Management</h3>
+            <p class="mt-2 text-gray-300">This is my first web project, using HTML, CSS, Tailwind, and MySQL.</p>
+            <a href="http://localhost:52256/#/login" class="mt-4 inline-block text-blue-400 font-semibold">View Project</a>
+          </div>
+        </div>
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden project-card transform transition-transform">
+          <img src="images/F1.png" alt="Project Screenshot" class="w-full h-48 object-cover"> <!-- Update the project image path -->
+          <div class="p-4">
+            <h3 class="text-2xl font-bold text-white">Quizzify</h3>
+            <p class="mt-2 text-gray-300">This is my Flutter project for our university, using Dart and Firebase.</p>
+            <a href="http://localhost:52234/#/login" class="mt-4 inline-block text-blue-400 font-semibold">View Project</a>
+          </div>
+        </div>
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden project-card transform transition-transform">
+          <img src="images/f2.png" alt="Project Screenshot" class="w-full h-48 object-cover"> <!-- Update the project image path -->
+          <div class="p-4">
+            <h3 class="text-2xl font-bold text-white">Traveler</h3>
+            <p class="mt-2 text-gray-300">This is my Flutter project for our university, using Dart and Firebase.</p>
+            <a href="http://localhost:54262/" class="mt-4 inline-block text-blue-400 font-semibold">View Project</a>
+          </div>
+        </div>
+        <!-- Add more projects as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gray-800 fade-in-up">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold section-title">Skills</h2>
+      <div class="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <!-- Example Skill with Logo -->
+        <div class="bg-gray-700 p-6 rounded-lg shadow-md zoom rotate">
+          <img src="images/cpp.png" alt="C++ Logo" class="w-16 h-16 mx-auto"> <!-- Update the skill image path -->
+        </div>
+        <div class="bg-gray-700 p-6 rounded-lg shadow-md zoom rotate">
+          <img src="images/csharp.png" alt="C# Logo" class="w-16 h-16 mx-auto"> <!-- Update the skill image path -->
+        </div>
+        <div class="bg-gray-700 p-6 rounded-lg shadow-md zoom rotate">
+          <img src="images/NJS.png" alt="Java Logo" class="w-16 h-16 mx-auto"> <!-- Update the skill image path -->
+        </div>
+        <div class="bg-gray-700 p-6 rounded-lg shadow-md zoom rotate">
+          <img src="images/JS.png" alt="Next.js Logo" class="w-16 h-16 mx-auto"> <!-- Update the skill image path -->
+        </div>
+        <div class="bg-gray-700 p-6 rounded-lg shadow-md zoom rotate">
+          <img src="images/mern.png" alt="MERN Stack Logo" class="w-16 h-16 mx-auto"> <!-- Update the skill image path -->
+        </div>
+        <div class="bg-gray-700 p-6 rounded-lg shadow-md zoom rotate">
+          <img src="images/html.png" alt="HTML Logo" class="w-16 h-16 mx-auto"> <!-- Update the skill image path -->
+        </div>
+        <div class="bg-gray-700 p-6 rounded-lg shadow-md zoom rotate">
+          <img src="images/css.png" alt="CSS Logo" class="w-16 h-16 mx-auto"> <!-- Update the skill image path -->
+        </div>
+        <div class="bg-gray-700 p-6 rounded-lg shadow-md zoom rotate">
+          <img src="images/bt.png" alt="Bootstrap Logo" class="w-16 h-16 mx-auto"> <!-- Update the skill image path -->
+        </div>
+        <div class="bg-gray-700 p-6 rounded-lg shadow-md zoom rotate">
+          <img src="images/tcss.png" alt="Tailwind CSS Logo" class="w-16 h-16 mx-auto"> <!-- Update the skill image path -->
+        </div>
+        <div class="bg-gray-700 p-6 rounded-lg shadow-md zoom rotate">
+          <img src="images/TS.png" alt="TypeScript Logo" class="w-16 h-16 mx-auto"> <!-- Update the skill image path -->
+        </div>
+        <div class="bg-gray-700 p-6 rounded-lg shadow-md zoom rotate">
+          <img src="images/figma.png" alt="Figma Logo" class="w-16 h-16 mx-auto"> <!-- Update the skill image path -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-900 fade-in-up">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold section-title">Contact Me</h2>
+      <form action="https://formspree.io/f/myyrqkee" method="POST" class="mt-8 max-w-md mx-auto bg-gray-800 p-8 rounded-lg shadow-lg fade-in-up">
+        <div class="mb-4">
+          <label for="name" class="block text-gray-400">Name</label>
+          <input type="text" id="name" name="name" class="w-full p-3 border border-gray-600 bg-gray-700 text-white rounded-lg" required>
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-gray-400">Email</label>
+          <input type="email" id="email" name="email" class="w-full p-3 border border-gray-600 bg-gray-700 text-white rounded-lg" required>
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-gray-400">Message</label>
+          <textarea id="message" name="message" class="w-full p-3 border border-gray-600 bg-gray-700 text-white rounded-lg" required></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-500 text-white p-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300 btn-hover">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    // Fade-in on scroll
+    document.addEventListener('scroll', () => {
+      document.querySelectorAll('.fade-in-up').forEach(element => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          element.classList.add('fade-in');
+        }
+      });
+    });
+
+    // Back to top button
+    const backToTopButton = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 100) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
