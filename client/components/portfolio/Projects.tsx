@@ -5,7 +5,7 @@ const projects = [
   {
     name: "Dar Al Maazil",
     stack: ["Next.js", "TypeScript", "Node.js", "Framer Motion", "MongoDB", "Tailwind CSS"],
-    link: "https://dar-ul-maazil.vercel.app/",
+    link: "https://damf-1-0.vercel.app/",
   },
   {
     name: "Shandar Carwheel",
